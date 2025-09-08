@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BeeniHives — Pure Raw Honey</title>
+  <meta name="description" content="BeeniHives — FSSAI registered beekeeper. Raw honey: Tulasi, Mustard, Til, Karanj, Litchi, Wild Forest, Sundarban." />
+  <style>
+    :root{--accent:#c77b00;--muted:#6b7280;--bg:#fff9f1;--honey1:#f6c24b;--honey2:#d48806}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:#111; background:var(--bg); -webkit-font-smoothing:antialiased}
+    a{color:inherit; text-decoration:none}
+    header{background:linear-gradient(90deg, rgba(199,123,0,0.12), rgba(0,0,0,0.02)); padding:14px 20px; position:sticky; top:0; z-index:40; backdrop-filter:saturate(120%) blur(4px)}
+    .container{max-width:1100px; margin:0 auto}
+    .nav{display:flex; align-items:center; justify-content:space-between}
+    .brand{display:flex; gap:12px; align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#f6d365,#fda085);display:flex;align-items:center;justify-content:center;font-weight:800;color:#5a3100}
+    nav ul{display:flex; gap:18px; list-style:none; margin:0; padding:0; align-items:center}
+    .btn{background:var(--accent); color:white; padding:8px 14px; border-radius:8px; font-weight:600}
+    main{overflow-x:hidden}
+
+    /* Sections */
+    section {padding:80px 20px; min-height:70vh}
+    .hero{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:center; padding-top:34px}
+    .hero-left h1{font-size:34px; margin:0 0 10px}
+    .tag{color:var(--muted); margin-bottom:14px}
+    .features{display:flex; gap:12px; flex-wrap:wrap}
+    .card{background:white;padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(20,20,20,0.06)}
+    .products-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:16px; margin-top:18px}
+    .product{background:white; border-radius:12px; padding:12px; box-shadow:0 8px 24px rgba(15,15,15,0.06)}
+    .product img{width:100%; height:160px; object-fit:cover; border-radius:8px}
+    .product h4{margin:8px 0 4px}
+    .product p{color:var(--muted); font-size:14px; margin:0}
+
+    /* Contact card */
+    .contact-card{display:flex; gap:18px; flex-wrap:wrap}
+    .contact-card .left{flex:1; min-width:260px}
+    .contact-card .right{flex:0 0 320px; min-width:240px}
+    form{display:flex; flex-direction:column; gap:10px}
+    input, textarea{padding:10px; border-radius:8px; border:1px solid #e6e6e6}
+
+    footer{padding:20px; text-align:center; color:var(--muted)}
+
+    /* Honey divider styles */
+    .honey-divider{position:relative; width:100%; overflow:hidden; line-height:0}
+    .honey-svg{display:block; width:120%; height:140px}
+    .honey-path{fill:url(#honeyGrad);}
+    .honey-overlay{position:absolute; inset:0; pointer-events:none}
+
+    /* realistic liquid effect using CSS blur & subtle transform */
+    .blob{filter:blur(0.6px); transform-origin:center top}
+
+    @media (max-width:880px){.hero{grid-template-columns:1fr; padding:20px}.hero-right{order:-1}}
+    @media (max-width:560px){nav ul{display:none}.menu-toggle{display:block}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">BH</div>
+        <div>
+          <div style="font-weight:800">BeeniHives</div>
+          <div style="font-size:12px;color:var(--muted)">FSSAI: 30250226119300823 • Proprietor</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex; gap:10px; align-items:center">
+        <div class="card badge">Taste of nature</div>
+        <a class="btn" href="#contact">Order Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- HERO -->
+    <section class="container">
+      <div class="hero">
+        <div class="hero-left">
+          <p class="tag">BeeniHives — Pure & Certified Raw Honey</p>
+          <h1>Taste of nature — Single-origin & Forest Varieties</h1>
+          <p style="color:var(--muted); margin:12px 0">Authentic, unprocessed honey from Tulasi, Mustard, Til, Karanj, Litchi, Wild Forest and Sundarban. Small-batch, cold-filtered, no additives.</p>
+          <div class="features">
+            <div class="card">FSSAI Registered</div>
+            <div class="card">Batch labelled & traceable</div>
+            <div class="card">Small-batch harvests</div>
+          </div>
+          <div style="margin-top:18px; display:flex; gap:12px">
+            <a class="btn" href="#products">View Products</a>
+            <a style="padding:8px 12px; border-radius:8px; border:1px solid #e6e6e6" href="https://wa.me/9257960343">Order on WhatsApp</a>
+          </div>
+        </div>
+
+        <aside class="hero-right card">
+          <div style="font-weight:700; margin-bottom:8px">Featured — Sundarban Forest Honey</div>
+          <img src="assets/sundarban.png" alt="Sundarban Honey" style="width:100%; border-radius:10px; height:220px; object-fit:cover" />
+          <p style="color:var(--muted); margin-top:10px">Rare forest honey with medicinal notes. Limited quantities — contact to order.</p>
+          <div style="display:flex; gap:10px; margin-top:12px">
+            <a class="btn" href="#contact">Contact to Order</a>
+            <a style="padding:8px 12px; border-radius:8px; border:1px solid #e6e6e6" href="#products">All Varieties</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- HONEY DIVIDER -->
+    <div class="honey-divider" data-divider="1">
+      <svg class="honey-svg" viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="honeyGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--honey1)" />
+            <stop offset="100%" stop-color="var(--honey2)" />
+          </linearGradient>
+        </defs>
+        <path class="honey-path blob" d="M0,60 C200,140 400,0 720,60 C1040,120 1240,40 1440,60 L1440,160 L0,160 Z"></path>
+      </svg>
+    </div>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="container">
+      <h2 style="margin:6px 0 10px">Our Honey Varieties</h2>
+      <p style="color:var(--muted); margin:0 0 14px">Choose from single-origin and forest varieties. Each jar is batch-labelled for traceability.</p>
+
+      <div class="products-grid">
+        <div class="product">
+          <img src="assets/tulasi.png" alt="Tulasi Honey">
+          <h4>Tulasi Honey — 350g / 500g / 1kg</h4>
+          <p>Immunity-boosting, aromatic honey from Tulasi blossoms.</p>
+        </div>
+
+        <div class="product">
+          <img src="assets/mustard.png" alt="Mustard Honey">
+          <h4>Mustard Honey — 350g / 500g / 1kg</h4>
+          <p>Strong, pungent flavour—ideal for cooking and traditional remedies.</p>
+        </div>
+
+        <div class="product">
+          <img src="assets/til.png" alt="Til Honey">
+          <h4>Til (Sesame) Honey — 350g / 500g / 1kg</h4>
+          <p>Mild, smooth honey with a delicate finish.</p>
+        </div>
+
+        <div class="product">
+          <img src="assets/karanj.png" alt="Karanj Honey">
+          <h4>Karanj Honey — 350g / 500g / 1kg</h4>
+          <p>Unique profile from Karanj blossoms; used traditionally for wellness.</p>
+        </div>
+
+        <div class="product">
+          <img src="assets/litchi.png" alt="Litchi Honey">
+          <h4>Litchi Honey — 350g / 500g / 1kg</h4>
+          <p>Delicate floral notes—light and fragrant.</p>
+        </div>
+
+        <div class="product">
+          <img src="assets/wild.png" alt="Wild Forest Honey">
+          <h4>Wild Forest Honey — 350g / 500g / 1kg</h4>
+          <p>Complex, woody notes from mixed forest flora.</p>
+        </div>
+
+        <div class="product">
+          <img src="assets/sundarban.png" alt="Sundarban Honey">
+          <h4>Sundarban Forest Honey — 350g / 500g / 1kg</h4>
+          <p>Rare, medicinal honey harvested sustainably from Sundarban hives.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HONEY DIVIDER 2 -->
+    <div class="honey-divider" data-divider="2">
+      <svg class="honey-svg" viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="honey-path blob" d="M0,40 C220,140 420,20 720,80 C1000,140 1200,40 1440,80 L1440,160 L0,160 Z"></path>
+      </svg>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="container">
+      <div style="display:grid; grid-template-columns:1fr 360px; gap:20px; align-items:start">
+        <div>
+          <h2>About BeeniHives</h2>
+          <p style="color:var(--muted)">BeeniHives is a proprietorship run by a certified beekeeper. We follow sustainable beekeeping practices and cold-filter our honey without heating or additives to preserve natural enzymes and nutrients.</p>
+          <ul style="color:var(--muted)">
+            <li>FSSAI Registered — 30250226119300823</li>
+            <li>Batch labelling & traceability</li>
+            <li>Small-batch harvests for quality control</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Certifications & Contact</h4>
+          <p class="fssai">FSSAI License: <strong>30250226119300823</strong></p>
+          <p style="margin:6px 0"><strong>Email:</strong> <a href="mailto:beenihives@gmail.com">beenihives@gmail.com</a></p>
+          <p style="margin:6px 0"><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/9257960343">+91 92579 60343</a>, <a href="https://wa.me/7981793083">+91 79817 93083</a></p>
+          <p style="margin:6px 0"><strong>Instagram:</strong> <a href="https://instagram.com/Beenihives">@Beeni Hives</a></p>
+          <p style="color:var(--muted); font-size:13px">If you want GST and MSME details added, they will be shown here when provided.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HONEY DIVIDER 3 -->
+    <div class="honey-divider" data-divider="3">
+      <svg class="honey-svg" viewBox="0 0 1440 140" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="honey-path blob" d="M0,80 C200,120 400,20 720,80 C1040,140 1240,60 1440,80 L1440,140 L0,140 Z"></path>
+      </svg>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container">
+      <h2>Contact & Orders</h2>
+      <div class="card" style="padding:18px">
+        <div class="contact-card">
+          <div class="left">
+            <h3>Place an Order</h3>
+            <form id="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+              <input name="name" placeholder="Your name" required />
+              <input name="email" placeholder="Email" required />
+              <input name="phone" placeholder="Phone / WhatsApp" required />
+              <textarea name="message" placeholder="Which honey & quantity? (e.g. Tulasi - 2 x 500g)" rows="4" required></textarea>
+              <input type="hidden" name="_subject" value="New order from BeeniHives website" />
+              <button class="btn" type="submit">Send Order</button>
+            </form>
+            <p style="color:var(--muted); font-size:13px; margin-top:8px">Tip: replace the Formspree action URL with your own Formspree endpoint or use Formsubmit.co / Google Forms if preferred.</p>
+          </div>
+
+          <div class="right">
+            <h3>Quick Contacts</h3>
+            <p style="margin:6px 0"><strong>Owner:</strong> Proprietor, BeeniHives</p>
+            <p style="margin:6px 0"><strong>Email:</strong> <a href="mailto:beenihives@gmail.com">beenihives@gmail.com</a></p>
+            <p style="margin:6px 0"><strong>WhatsApp:</strong> <a href="https://wa.me/9257960343">+91 92579 60343</a></p>
+            <div style="margin-top:8px" class="socials">
+              <a href="https://instagram.com/Beenihives">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap">
+        <div>&copy; BeeniHives — Proprietor. All rights reserved.</div>
+        <div style="color:var(--muted)">Made with ❤️ • FSSAI: <strong>30250226119300823</strong></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple scroll-based realistic honey movement: update SVG path translateY based on scroll velocity
+    (function(){
+      const dividers = Array.from(document.querySelectorAll('.honey-divider'));
+      let lastScrollY = window.scrollY;
+      let lastTime = performance.now();
+
+      function update(){
+        const now = performance.now();
+        const dy = window.scrollY - lastScrollY;
+        const dt = now - lastTime || 16;
+        const velocity = dy / dt; // px per ms
+
+        // map velocity to translate value
+        const t = Math.max(Math.min(velocity * 120, 40), -40);
+
+        dividers.forEach((d,i)=>{
+          const path = d.querySelector('.honey-path');
+          if(!path) return;
+          // subtle parallax effect: different dividers move slightly different amounts
+          const factor = 1 + i*0.2;
+          path.style.transform = `translateY(${t * factor}px)`;
+        });
+
+        lastScrollY = window.scrollY;
+        lastTime = now;
+        requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+
+      // small gentle bobbing to simulate viscosity
+      setInterval(()=>{
+        document.querySelectorAll('.honey-path').forEach((p, idx)=>{
+          p.style.transition = 'transform 400ms cubic-bezier(.22,.9,.32,1)';
+          p.style.transform = 'translateY(6px)';
+          setTimeout(()=> p.style.transform = 'translateY(0px)', 420);
+        });
+      }, 4200);
+
+      // form UX
+      const form = document.getElementById('contact-form');
+      if(form) form.addEventListener('submit', ()=> setTimeout(()=> alert('Thank you! Your order was sent. We will contact you soon.'), 250));
+    })();
+  </script>
+</body>
+</html>
